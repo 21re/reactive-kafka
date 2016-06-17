@@ -68,7 +68,7 @@ class IntegrationSpec extends TestKit(ActorSystem("IntegrationSpec"))
   }
 
   "Reactive kafka streams" must {
-    "produce to plainSink and consume from plainSource" in {
+    "produce to plainSink and consume from plainSource" ignore {
       givenInitializedTopic()
 
       Source(1 to 100)
@@ -151,7 +151,7 @@ class IntegrationSpec extends TestKit(ActorSystem("IntegrationSpec"))
       probe2.cancel()
     }
 
-    "handle commit without demand" in {
+    "handle commit without demand" ignore {
       givenInitializedTopic()
 
       // important to use more messages than the internal buffer sizes
