@@ -78,6 +78,10 @@ lazy val core = project
   .settings(commonSettings)
   .settings(Seq(
     name := "akka-stream-kafka",
+    publishMavenStyle := true,
+    bintrayOmitLicense := true,
+    bintrayOrganization := Some("21re"),
+    bintrayRepository := "public",
     libraryDependencies ++= commonDependencies ++ coreDependencies
 ))
 
